@@ -1,0 +1,23 @@
+---
+title: "Analysis of Cars"
+author: Amelia Li
+date: today
+---
+
+# Header
+
+Let's investigate the relationship between fuel efficiency (`mpg`) and engine displacement (`disp`) from the `mtcars` dataset.
+
+## Sub-Header
+
+Here is a plot:
+
+```{r}
+#| message: false
+
+library(tidyverse)
+data(mtcars)
+
+mtcars |>
+  ggplot(aes(mpg, disp)) +
+  geom_point(color="dodgerblue4", size=2)

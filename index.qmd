@@ -1,0 +1,14 @@
+---
+title: "Amelia Li"
+about:
+  template: jolla
+  links:
+    - icon: envelope
+      href: mailto:aml061@ucsd.edu
+    - icon: linkedin
+      href: https://www.linkedin.com/in/kexin-amelia-li-8a66072b9/
+---
+
+Hi, I'm Amelia Li. I'm a student at UC San Diego studying business analysis. I earned my Business Economics bachelor degree at UC Irvine. I'm excited to bring my business insights to data world!
+
+This site shares a little about me, my resume, and some example projects built with Quarto.

@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #f6f1eb;
+}
+
+.navbar-brand, .nav-link {
+  color: #5b4636 !important;
+}
+
+h1, h2, h3 {
+  color: #7a4e2d;
+}
+
+a {
+  color: #a05a2c;
+}
+
+body {
+  background-color: #fffaf6;
+}/* css styles */

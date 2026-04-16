@@ -1,0 +1,7 @@
+---
+title: "Project 2"
+date: "2026-04-09"
+categories: [project]
+---
+
+This is my second project post.

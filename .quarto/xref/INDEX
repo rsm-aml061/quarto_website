@@ -1,0 +1,35 @@
+{
+  "index.qmd": {
+    "index.html": "7916cb11"
+  },
+  "about.qmd": {
+    "about.html": "4e03175d"
+  },
+  "resume.qmd": {
+    "resume.html": "d9e227db"
+  },
+  "projects/project1/index.qmd": {
+    "index.html": "ec2060c2"
+  },
+  "projects/project2/index.qmd": {
+    "index.html": "42d25043"
+  },
+  "projects.qmd": {
+    "projects.html": "95325a4e"
+  },
+  "blog posts/ab-testing.qmd": {
+    "ab-testing.html": "a903ffd3"
+  },
+  "blog posts/posts.qmd": {
+    "posts.html": "daf23288"
+  },
+  "posts/ab-testing.qmd": {
+    "ab-testing.html": "97e5102f"
+  },
+  "posts/posts.qmd": {
+    "posts.html": "b51e6f7b"
+  },
+  "posts.qmd": {
+    "posts.html": "3d4a8d53"
+  }
+}
