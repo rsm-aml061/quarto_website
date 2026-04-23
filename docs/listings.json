@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/card-krueger.html",
       "/posts/ab-testing.html"
     ]
   },

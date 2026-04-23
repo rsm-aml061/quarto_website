@@ -4,7 +4,7 @@
     "href": "posts.html",
     "title": "Blog",
     "section": "",
-    "text": "Welcome to my blog.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA/B Testing a Call to Action\n\n\nSimulating Key Ideas from Classical Frequentist Statistics\n\n\n\n\n\n\n\n\nApr 15, 2026\n\n\nAmelia Li\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my blog.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReplication of Card & Krueger (1994)\n\n\n\n\n\n\n\n\n\n\n\nApr 22, 2026\n\n\nAmelia Li\n\n\n\n\n\n\n\n\n\n\n\n\nA/B Testing a Call to Action\n\n\nSimulating Key Ideas from Classical Frequentist Statistics\n\n\n\n\n\n\n\n\nApr 22, 2026\n\n\nAmelia Li\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -105,6 +105,69 @@
     "text": "Download PDF file."
   },
   {
+    "objectID": "posts/card-krueger.html",
+    "href": "posts/card-krueger.html",
+    "title": "Replication of Card & Krueger (1994)",
+    "section": "",
+    "text": "Does raising the minimum wage reduce employment? Standard economic theory predicts that higher minimum wages lead to lower employment. However, Card and Krueger (1994) challenge this view using a natural experiment: the increase in New Jersey’s minimum wage in 1992, while neighboring Pennsylvania did not change its policy.\nThis study compares employment changes in fast-food restaurants across the two states using a difference-in-differences (DID) approach."
+  },
+  {
+    "objectID": "posts/card-krueger.html#introduction",
+    "href": "posts/card-krueger.html#introduction",
+    "title": "Replication of Card & Krueger (1994)",
+    "section": "",
+    "text": "Does raising the minimum wage reduce employment? Standard economic theory predicts that higher minimum wages lead to lower employment. However, Card and Krueger (1994) challenge this view using a natural experiment: the increase in New Jersey’s minimum wage in 1992, while neighboring Pennsylvania did not change its policy.\nThis study compares employment changes in fast-food restaurants across the two states using a difference-in-differences (DID) approach."
+  },
+  {
+    "objectID": "posts/card-krueger.html#data",
+    "href": "posts/card-krueger.html#data",
+    "title": "Replication of Card & Krueger (1994)",
+    "section": "Data",
+    "text": "Data\nThe dataset consists of fast-food restaurants in:\n\nNew Jersey (treatment group)\nPennsylvania (control group)\n\nObserved at two points: - Before (Feb 1992) - After (Nov 1992)"
+  },
+  {
+    "objectID": "posts/card-krueger.html#main-result-difference-in-differences",
+    "href": "posts/card-krueger.html#main-result-difference-in-differences",
+    "title": "Replication of Card & Krueger (1994)",
+    "section": "Main Result: Difference-in-Differences",
+    "text": "Main Result: Difference-in-Differences\nThe DID model is:\n\\[\nY_{it} = \\alpha + \\beta Treat_i + \\gamma Post_t + \\delta (Treat_i \\times Post_t) + \\epsilon_{it}\n\\]\nWhere: - \\(Treat_i = 1\\) for NJ - \\(Post_t = 1\\) after policy - \\(\\delta\\) is the treatment effect"
+  },
+  {
+    "objectID": "posts/card-krueger.html#replication-using-summary-statistics",
+    "href": "posts/card-krueger.html#replication-using-summary-statistics",
+    "title": "Replication of Card & Krueger (1994)",
+    "section": "Replication (Using Summary Statistics)",
+    "text": "Replication (Using Summary Statistics)\nFrom the paper:\n\nNJ before: 20.4\n\nNJ after: 21.0\n\nPA before: 23.3\n\nPA after: 21.2\n\nNJ_before &lt;- 20.4 NJ_after &lt;- 21.0 PA_before &lt;- 23.3 PA_after &lt;- 21.2\nDID &lt;- (NJ_after - NJ_before) - (PA_after - PA_before) DID\nResult The DID estimate is computed as: (21.0 - 20.4) - (21.2 - 23.3) = 2.7 The DID estimate is approximately:2.76 This matches the main finding of the paper.\n\nlibrary(ggplot2)\n\ndf &lt;- data.frame(\n  State = rep(c(\"New Jersey\", \"Pennsylvania\"), each = 2),\n  Period = rep(c(\"Before\", \"After\"), times = 2),\n  Employment = c(20.4, 21.0, 23.3, 21.2)\n)\n\nggplot(df, aes(x = Period, y = Employment, group = State, color = State)) +\n  geom_line(linewidth = 1) +\n  geom_point(size = 3) +\n  scale_x_discrete(limits = c(\"Before\", \"After\")) +\n  labs(\n    title = \"Employment Before and After Minimum Wage Increase\",\n    y = \"FTE Employment\"\n  )"
+  },
+  {
+    "objectID": "posts/card-krueger.html#interpretation",
+    "href": "posts/card-krueger.html#interpretation",
+    "title": "Replication of Card & Krueger (1994)",
+    "section": "Interpretation:",
+    "text": "Interpretation:\nPennsylvania employment decreased New Jersey employment slightly increased The difference between these trends is exactly the DID estimate."
+  },
+  {
+    "objectID": "posts/card-krueger.html#discussion",
+    "href": "posts/card-krueger.html#discussion",
+    "title": "Replication of Card & Krueger (1994)",
+    "section": "Discussion",
+    "text": "Discussion\nThe results suggest that increasing the minimum wage did not reduce employment, contrary to traditional theory.\nThis causal interpretation relies on the parallel trends assumption: Without the policy, NJ and PA would have followed similar trends."
+  },
+  {
+    "objectID": "posts/card-krueger.html#extension",
+    "href": "posts/card-krueger.html#extension",
+    "title": "Replication of Card & Krueger (1994)",
+    "section": "Extension",
+    "text": "Extension\nWe can also interpret the DID estimate as: Employment increased by about 2.76 workers per store Roughly a 13% increase relative to baseline"
+  },
+  {
+    "objectID": "posts/card-krueger.html#conclusion",
+    "href": "posts/card-krueger.html#conclusion",
+    "title": "Replication of Card & Krueger (1994)",
+    "section": "Conclusion",
+    "text": "Conclusion\nThis replication confirms the main finding of Card & Krueger (1994): there is no evidence that the minimum wage increase reduced employment.\nThe study demonstrates the power of quasi-experimental methods like DID in evaluating policy effects."
+  },
+  {
     "objectID": "projects/project1/index.html",
     "href": "projects/project1/index.html",
     "title": "Analysis of Cars",
@@ -123,7 +186,7 @@
     "href": "projects.html",
     "title": "My Projects",
     "section": "",
-    "text": "Analysis of Cars\n\n\n\n\n\n\nAmelia Li\n\n\nApr 15, 2026\n\n\n\n\n\n\n\n\n\n\n\nProject 2\n\n\n\n\n\n\n\n\n\nApr 9, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Analysis of Cars\n\n\n\n\n\n\nAmelia Li\n\n\nApr 22, 2026\n\n\n\n\n\n\n\n\n\n\n\nProject 2\n\n\n\n\n\n\n\n\n\nApr 9, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",

@@ -31,5 +31,8 @@
   },
   "posts.qmd": {
     "posts.html": "3d4a8d53"
+  },
+  "posts/card-krueger.qmd": {
+    "card-krueger.html": "ddb04201"
   }
 }
