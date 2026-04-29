@@ -45,7 +45,7 @@ $$
 \hat\theta = \bar{X}_A - \bar{X}_B
 $$
 
-Since the data are binary, this is simply the difference in observed signup rates.
+Since the data are binary, this is simply the difference in observed signup rates. In other words, this measures how much better one version performs compared to the other.
 
 ## Simulating Data
 In practice, we do not know the true values of $\pi_A$ and $\pi_B$. For this exercise, we set them manually to study how the estimator behaves.
